@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_question</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="update-sept18" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Detik-ID-mobile---daftar-telp-tooltip" transform="translate(-205.000000, -813.000000)">
+            <g id="Group-11-Copy" transform="translate(40.000000, 813.000000)">
+                <g id="icon_question" transform="translate(166.000000, 0.000000)">
+                    <circle id="Oval-3" stroke="#4986F2" cx="6" cy="7" r="6.5"></circle>
+                    <text id="?" font-family="Montserrat-Regular, Montserrat" font-size="11" font-weight="normal" fill="#4986F2">
+                        <tspan x="3.76351221" y="11">?</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
