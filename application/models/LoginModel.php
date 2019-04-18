@@ -9,5 +9,5 @@ class LoginModel extends CI_Model{
         return $usr->row_array();
     }
 
-    
+
 }

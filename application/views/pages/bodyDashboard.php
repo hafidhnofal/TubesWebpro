@@ -181,11 +181,11 @@
                 <div class="sub">
 
                     <div class="s1"> Nama Lengkap :</div>
-                    <div class="s2"> Ikan Cupang</div>
+                    <div class="s2"> <?php echo $user['nama'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Jenis Kelamin :</div>
-                    <div class="s2"> Pria</div>
+                    <div class="s2"> <?php echo $user['jns_kelamin'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Usia :</div>
@@ -193,31 +193,31 @@
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Tentang Saya:</div>
-                    <div class="s2"> </div>
+                    <div class="s2"> <?php echo $user['tentang'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Website :</div>
-                    <div class="s2"> http://-</div>
+                    <div class="s2"> http://-<?php echo $user['website'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Alamat :</div>
-                    <div class="s2"> </div>
+                    <div class="s2"> <?php echo $user['alamat'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Negara :</div>
-                    <div class="s2"> Indonesia</div>
+                    <div class="s2"> <?php echo $user['negara'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Propinsi :</div>
-                    <div class="s2"> Bengkulu</div>
+                    <div class="s2"> <?php echo $user['provinsi'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Kota :</div>
-                    <div class="s2"> Bengkulu</div>
+                    <div class="s2"> <?php echo $user['kota_asal'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Kodepos :</div>
-                    <div class="s2"> </div>
+                    <div class="s2"> <?php echo $user['kode_pos'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> KTP/SIM/Kartu Pelajar :</div>
@@ -233,15 +233,14 @@
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Telepon Seluler :</div>
-                    <div class="s2">  +62289378232 &nbsp; &nbsp; &nbsp;
+                    <div class="s2">  +62<?php echo $user['telp'];?> &nbsp; &nbsp; &nbsp;
                          <a class="link_red box_modal_full" alt="/dashboard/settings/popup/send_pin">  Verifikasi sekarang</a>
                     
                     </div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Status :</div>
-                    <div class="s2"> 
-                        Menikah</div>
+                    <div class="s2"> <?php echo $user['status'];?></div>
                     <div class="clearfix mt10"></div>
                 </div>
             </div>

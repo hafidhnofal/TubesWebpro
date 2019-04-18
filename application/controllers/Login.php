@@ -25,12 +25,10 @@ class Login extends CI_Controller{
             $this->session->set_userdata($data_session);
             $data['user']=$this->LoginModel->get_data_user($email);
             
-            $this->load->view('template/headerAsLogin', $data);
-            //$this->load->view('pages/'.$page, $data);
-            $this->load->view('template/footer');  
-            
+            redirect(base_url());
             }else{
-                //echo "Username dan password salah !";
+                $this->load->view('pages/login_v');
+                echo "<script>alert('Email or Password is Wrong, Please try again!');</script>";
             }
     }
     function logout(){
@@ -39,6 +37,9 @@ class Login extends CI_Controller{
     }
     
     function view_aktivitas(){
+        if(!$this->session->userdata('nama')){
+			redirect(base_url());
+		}
         $data['title']= "Aktivitas Info";
         $data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
         
@@ -48,6 +49,9 @@ class Login extends CI_Controller{
     }
 
     function view_profile(){
+        if(!$this->session->userdata('nama')){
+			redirect(base_url());
+		}
         $data['title']= "Profile Info";
         $data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
         
@@ -57,6 +61,9 @@ class Login extends CI_Controller{
     }
 
     function view_badge(){
+        if(!$this->session->userdata('nama')){
+			redirect(base_url());
+		}
         $data['title']= "Profile Info";
         $data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
         
@@ -66,6 +73,9 @@ class Login extends CI_Controller{
     }
 
     function view_dashboard(){
+        if(!$this->session->userdata('nama')){
+			redirect(base_url());
+		}
         $data['title']= "Dashboard";
         $data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
         
@@ -75,6 +85,9 @@ class Login extends CI_Controller{
     }
 
     function view_editakun(){
+        if(!$this->session->userdata('nama')){
+			redirect(base_url());
+		}
         $data['title']= "Edit Akun";
 
         $data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
@@ -84,6 +97,16 @@ class Login extends CI_Controller{
     }
 
     function update_user(){
-        
+        if(!$this->session->userdata('nama')){
+			redirect(base_url());
+		}
+        $data['title'] = 'Update User';
+
+        $this->LoginModel->update($this->session->userdata('nama'));
+
+        $data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
+        $this->load->view('template/headerProfile', $data);
+        $this->load->view('pages/bodyDashboard',$data);
+        $this->load->view('template/footer');
     }
 }

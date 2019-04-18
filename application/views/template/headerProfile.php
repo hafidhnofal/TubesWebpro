@@ -1,4 +1,5 @@
-<html class="gr__connect_detik_com"><head>
+<html class="gr__connect_detik_com">
+    <head>
         <title>
         <?php echo $user['nama'];?> -
         <?php echo $user['email'];?>
@@ -9,11 +10,14 @@
         <link href="<?php echo base_url();?>asset/css/headerProfile/connectdash.style.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url();?>asset/css/headerProfile/connectdash.new.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url();?>asset/css/headerProfile/detik.topbar_new.css" rel="stylesheet" type="text/css">
-    
+        
+
     <script type="text/javascript" src="<?php echo base_url();?>asset/js/headerProfile/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>asset/js/headerProfile/jquery.autocomplete.js"></script>
     
-    <style type="text/css">.imgLiquid img {visibility:hidden}</style></head><body data-gr-c-s-loaded="true" style="overflow: scroll;">
+    <style type="text/css">.imgLiquid img {visibility:hidden}</style>
+</head>
+<body data-gr-c-s-loaded="true" style="overflow: scroll;">
         <div id="framebar_new">
         <div class="new_container">
             <div class="ico_detik fm_select_area" id="ico_detik">
@@ -31,7 +35,7 @@
             <div class="login_area">
                     <div class="fm_user fm_select_area" id="fm_user">
                     <span class="pic" style="background-image:url(''), url('<?php echo base_url();?>asset/images/headerProfile/foto-default.png');"></span>
-                        <span class="name">Ikan Cupang</span>
+                        <span class="name"><?php echo $user['nama'];?></span>
                     </div>
                     <div class="drop_users flot_frame" id="drop_users" style="display: none;">
                         <img src="<?php echo base_url();?>asset/images/headerProfile/frb_arrow_up.png" alt="" class="arrow_kanal">
@@ -44,9 +48,13 @@
                                 <img src="<?php echo base_url();?>asset/images/headerProfile/frb_setting.png">
                                 <span>Dashboard</span>
                             </a>
-                            <a onclick="gtmDataLayer('Logout', 'Email')" href="/oauth/signout">
+                            <a href="<?php echo base_url();?>login/logout">
                                 <img src="<?php echo base_url();?>asset/images/headerProfile/frb_logout.png">
                                 <span>Keluar</span>
+                            </a>
+                            <a href="<?php echo base_url();?>">
+                                <img src="<?php echo base_url();?>asset/images/headerProfile/favicon_detikcom.png">
+                                <span>Detik.com</span>
                             </a>
                         </div>
                     </div>

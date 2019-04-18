@@ -58,8 +58,8 @@
                         </ul>
                     </li>
                     <li class="" id="nav_badge">
-                        <a href="/dashboard/public/ikancupang1221/badge?" class="tooltip" title="Input Berita Yuuk!">
-                            Input Berita</a>    
+                        <a href="<?php echo base_url();?>berita/beritahome" class="tooltip" title="Tambah Berita Yuuk!">
+                            Tambah Berita</a>    
                         <ul class="list_badge">
                             
                         </ul>
@@ -93,7 +93,7 @@
             <div class="box profilex">
                 <div class="sub">
                     <div class="s1"> Website :</div>
-                    <div class="s2"> http://-</div>
+                    <div class="s2"> http://-<?php echo $user['website'];?></div>
                     <div class="clearfix mt10"></div>
                     <div class="s1"> Negara :</div>
                     <div class="s2">               

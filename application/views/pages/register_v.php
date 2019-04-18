@@ -39,7 +39,7 @@
 		</div>
 	</div>
         <div class="dtkid__header__bg dtkid__header__bg--right"></div>
-        <a href="" class="close_box_in"><span class="icon icon-button_close icon-button_close-dims"></span></a>
+        <a href="<?php echo base_url();?>" class="close_box_in"><span class="icon icon-button_close icon-button_close-dims"></span></a>
     </header>		<section class="dtkid__form text-center">
 
 
@@ -88,11 +88,11 @@
                 <label for="">JENIS KELAMIN</label>
                 <div class="dtkid__form__fieldset__radio clearfix mt10 mb20">
                     <div class="dtkid__form__fieldset__radio__item">
-                        <input type="radio" name="sex" value="male" id="pria">
+                        <input type="radio" name="sex" value="Pria" id="pria">
                         <label for="pria">Pria</label>
                     </div>
                     <div class="dtkid__form__fieldset__radio__item">
-                        <input type="radio" name="sex" value="female" id="wanita">
+                        <input type="radio" name="sex" value="Wanita" id="wanita">
                         <label for="wanita">Wanita</label>
                     </div>
                 </div>

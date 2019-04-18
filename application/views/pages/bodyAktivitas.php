@@ -55,8 +55,8 @@
                         </ul>
                     </li>
                     <li class="" id="nav_badge">
-                        <a href="/dashboard/public/ikancupang1221/badge?" class="tooltip" title="Input Berita Yuuk!">
-                            Input Berita</a>    
+                        <a href="<?php echo base_url();?>berita/beritahome" class="tooltip" title="Tambah Berita Yuuk!">
+                            Tambah Berita</a>    
                         <ul class="list_badge">
                             
                         </ul>
