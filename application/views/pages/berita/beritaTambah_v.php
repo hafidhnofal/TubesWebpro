@@ -11,7 +11,7 @@
   </div>
   <div class="form-group">
     <label>Body</label>
-    <textarea id="ckeditor" class="ckeditor" name="isi" placeholder="Tambah Isi"></textarea>
+    <textarea id="form7" class="md-textarea form-control" rows="8" name="isi" placeholder="Tambah Isi"></textarea>
   </div>
   <div class="form-group">
 	  <label>Category</label>

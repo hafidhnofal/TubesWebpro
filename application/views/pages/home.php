@@ -10,7 +10,7 @@
         <small class="post-date">Posted on: <?php echo $brt['tgl_buat']; ?> in <strong><?php echo $brt['nama']; ?></strong></small><br>
     <?php echo $brt['ringkasan']; ?>
     <br><br>
-    <p><a class="btn btn-primary" href="<?php echo site_url('/posts/'.$brt['ringkasan']); ?>">Read More</a></p>
+    <p><a class="btn btn-primary" href="<?php echo base_url(); ?>pages/readmore/<?= $brt['id_berita'] ?>">Read More</a></p>
     </div>
 </div>
 <?php endforeach; ?>

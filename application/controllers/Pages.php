@@ -24,4 +24,18 @@
             
         }
 
+        function readmore($id){
+            $data['berita'] = $this->BeritaModel->getBeritaById($id);
+            if(!$this->session->userdata('nama')){
+                $this->load->view('template/header');
+                $this->load->view('pages/berita/beritaLihatHome_v',$data);
+                $this->load->view('template/footer');
+            }else{
+                $data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
+                $this->load->view('template/headerAsLogin', $data);
+                $this->load->view('pages/berita/beritaLihatHome_v',$data);
+                $this->load->view('template/footer');  
+            }
+        }
+
     }
