@@ -12,9 +12,8 @@
         }
     
         public function create_post($post_image,$id){
-            $num_char = 40;
             $text = $this->input->post('isi');
-            $ringkas=substr($text, 0, $num_char) . '...';
+            $ringkas=word_limiter($text, 45) . '...';
 			$data = array(
 				'judul' => $this->input->post('judul'),
                 'isi' => $this->input->post('isi'),
@@ -26,9 +25,8 @@
 			return $this->db->insert('berita', $data);
         }
         public function update_post($post_image,$id){
-            $num_char = 40;
             $text = $this->input->post('isi');
-            $ringkas=substr($text, 0, $num_char) . '...';
+            $ringkas=word_limiter($text, 45) . '...';
 			$data = array(
 				'judul' => $this->input->post('judul'),
                 'isi' => $this->input->post('isi'),
@@ -55,10 +53,13 @@
     
         public function cariDataBerita(){
             $keyword = $this->input->post('keyword', true);
+            $this->db->query('SELECT * FROM `berita` JOIN user USING(id_user)');
             $this->db->like('judul',$keyword);
             $this->db->or_like('isi',$keyword);
             $this->db->or_like('ringkasan',$keyword);
             $this->db->or_like('kategori',$keyword);
+            $this->db->or_like('nama',$keyword);
+            $this->db->join('user', 'id_user');
             return $this->db->get('berita')->result_array();
         }
     }

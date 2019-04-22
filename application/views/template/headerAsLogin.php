@@ -157,8 +157,8 @@
 
             <div class="dtkframebar__search pull-left gtm_framebardc_search">
                 <div class="dtkframebar__search__input gtm_framebardc_btn_search">
-                    <form id="search_navbar" action="#">
-                        <input name="query" type="text" class="text" placeholder="Cari Berita" autocomplete="off">
+                    <form method="post" action="#">
+                        <input name="keyword" type="text" class="text" placeholder="Cari Berita" autocomplete="off">
                         <input name="siteid" type="hidden" value="2">
                         <button class="dtkframebar__icons dtkframebar__icons-search"></button>
                     </form>

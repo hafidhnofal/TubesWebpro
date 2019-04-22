@@ -59,10 +59,13 @@ class Berita extends CI_Controller{
 		if(!$this->session->userdata('nama')){
 			redirect(base_url());
 		}
+		$new_name = time().$_FILES["userfiles"]['name'];
+		
 		$data['title'] = 'Create Post';
 			// Upload Image
 			$config['upload_path'] 		= './asset/images/berita/';
 			$config['allowed_types'] 	= 'gif|jpg|jpeg|png';
+			$config['file_name'] 		= $new_name;
 			$config['overwrite'] 		= true;
 			$config['max_size'] 		= '2048';
 			$config['max_width'] 		= '2000';
@@ -75,7 +78,7 @@ class Berita extends CI_Controller{
 				$post_image = 'noimage.jpg';
 			} else {
 				$data = array('upload_data' => $this->upload->data());
-				$post_image = $this->upload->data("file_name");
+				$post_image = $new_name.$this->upload->data('file_ext');
 			}
 			$id=$this->UserModel->get_id_by_email($this->session->userdata('nama'));
 			$this->BeritaModel->create_post($post_image,$id);
@@ -90,6 +93,7 @@ class Berita extends CI_Controller{
 	}
 
 	public function ubah($id){
+		$new_name = time().$_FILES["userfiles"]['name'];
 		// Check login
 		if(!$this->session->userdata('nama')){
 			redirect(base_url());
@@ -97,6 +101,7 @@ class Berita extends CI_Controller{
 		$config['upload_path'] 		= './asset/images/berita/';
 		$config['allowed_types'] 	= 'gif|jpg|jpeg|png';
 		$config['overwrite'] 		= true;
+		$config['file_name'] 		= $new_name;
 		$config['max_size'] 		= '2048';
 		$config['max_width'] 		= '2000';
 		$config['max_height'] 		= '2000';
@@ -108,7 +113,7 @@ class Berita extends CI_Controller{
 			$post_image = 'noimage.jpg';
 		} else {
 			$data = array('upload_data' => $this->upload->data());
-			$post_image = $this->upload->data("file_name");
+			$post_image = $new_name.$this->upload->data('file_ext');
 		}
 		$this->BeritaModel->update_post($post_image,$id);
 		// Set message

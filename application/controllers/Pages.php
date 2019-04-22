@@ -9,7 +9,12 @@
             if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
 				show_404();
             }
+
+            
             $data['berita']=$this->BeritaModel->getAllData();
+            if ($this->input->post('keyword')) {
+                $data['berita'] = $this->BeritaModel->cariDataBerita();
+            }
             if(!$this->session->userdata('nama')){
                 $this->load->view('template/header');
                 $this->load->view('pages/'.$page,$data);
@@ -20,7 +25,6 @@
                 $this->load->view('pages/'.$page, $data);
                 $this->load->view('template/footer');  
             }
-            
             
         }
 
@@ -36,6 +40,10 @@
                 $this->load->view('pages/berita/beritaLihatHome_v',$data);
                 $this->load->view('template/footer');  
             }
+        }
+
+        function search(){
+
         }
 
     }

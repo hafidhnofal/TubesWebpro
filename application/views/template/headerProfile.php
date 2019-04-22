@@ -26,7 +26,7 @@
                 </a>
             </div>
             <div class="new_search">
-                <form action="">
+                <form method="post" action="#">
                     <input name="query" class="text" placeholder="Cari Berita atau Alamat" type="text">
                     <input name="source" value="dcnav" type="hidden">
                     <input value="" class="btn_s" type="submit">
