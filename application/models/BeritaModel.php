@@ -18,7 +18,7 @@
 			$data = array(
 				'judul' => $this->input->post('judul'),
                 'isi' => $this->input->post('isi'),
-                'ringkasan' => $ringkas,
+                'ringkasan' => '<div>'.$ringkas.'</div>',
 				'kategori' => $this->input->post('kategori'),
 				'id_user' => $id,
 				'image' => $post_image
@@ -32,7 +32,7 @@
 			$data = array(
 				'judul' => $this->input->post('judul'),
                 'isi' => $this->input->post('isi'),
-                'ringkasan' => $ringkas,
+                'ringkasan' => '<div>'+$ringkas+'</div>',
 				'kategori' => $this->input->post('kategori'),
 				'image' => $post_image
 			);

@@ -15,7 +15,20 @@
   </div>
   <div class="form-group">
 	  <label>Category</label>
-      <input type="text" class="form-control" value="<?php echo $berita['kategori']?>" name="kategori" placeholder="Tambah Kategori">
+    <select name="kategori" value="<?php echo $berita['kategori']?>" class="form-control" id="">
+        <Option value="News">--Pilih Kategori--</Option>
+        <Option value="Teknologi">Teknologi</Option>
+        <Option value="Life">Life</Option>
+        <Option value="Finance">Finance</Option>
+        <Option value="Sepakbola">Sepakbola</Option>
+        <Option value="Travel">Travel</Option>
+        <Option value="Health">Health</Option>
+        <Option value="Foto">Foto</Option>
+        <Option value="Food">Food</Option>
+        <Option value="Wolipop">Wolipop</Option>
+        <Option value="Otomotif">Otomotif</Option>
+        <Option value="Sport">Sport</Option>
+      </select>
   </div>
   <div class="form-group">
 	  <label>Upload Image</label>

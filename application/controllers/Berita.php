@@ -62,7 +62,7 @@ class Berita extends CI_Controller{
 		$data['title'] = 'Create Post';
 			// Upload Image
 			$config['upload_path'] 		= './asset/images/berita/';
-			$config['allowed_types'] 	= 'gif|jpg|png';
+			$config['allowed_types'] 	= 'gif|jpg|jpeg|png';
 			$config['overwrite'] 		= true;
 			$config['max_size'] 		= '2048';
 			$config['max_width'] 		= '2000';
@@ -95,7 +95,7 @@ class Berita extends CI_Controller{
 			redirect(base_url());
 		}
 		$config['upload_path'] 		= './asset/images/berita/';
-		$config['allowed_types'] 	= 'gif|jpg|png';
+		$config['allowed_types'] 	= 'gif|jpg|jpeg|png';
 		$config['overwrite'] 		= true;
 		$config['max_size'] 		= '2048';
 		$config['max_width'] 		= '2000';
