@@ -38,7 +38,7 @@
             <div class="menu_area">
 
                 <div class="user_area2">
-                    <form method="post" action="/dashboard/" style="margin: 0px;" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken" value="i3dNsxKEUShhaPctvZyvK9DUY4VjS0981qdGmc3LaFDofHfKbVDIJulYt3sEtezD">
+                    <form method="post" action="/dashboard/" style="margin: 0px;" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken">
                         <div class="profile_pict">
                             <div class="img_act round">
                                 <label style="cursor: pointer;">
@@ -59,9 +59,9 @@
                 </div>
 
                 <div class="nama1">
-                    <b>Ikan Cupang</b>
+                    <b><?php echo $user['nama'];?></b>
                     Bergabung sejak : 01 Apr 2019
-                    Bengkulu, Indonesia
+                    <?php echo $user['provinsi'];?>, <?php echo $user['negara'];?>
                 </div>
 
                 <div class="aboutme">
@@ -149,11 +149,11 @@
                 <div class="sub">
 
                     <div class="s1"> Username :</div>
-                    <div class="s2"> ikancupang1221</div>
+                    <div class="s2"> <?php echo $user['email'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Email :</div>
-                    <div class="s2"> ikancupang1221@gmail.com</div>
+                    <div class="s2"> <?php echo $user['email'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Social Media :</div>
@@ -188,8 +188,8 @@
                     <div class="s2"> <?php echo $user['jns_kelamin'];?></div>
                     <div class="clearfix mt10"></div>
 
-                    <div class="s1"> Usia :</div>
-                    <div class="s2"> 20 Tahun</div>
+                    <div class="s1"> Tgl Lahir :</div>
+                    <div class="s2"> <?php echo $user['tgl_lahir'];?></div>
                     <div class="clearfix mt10"></div>
 
                     <div class="s1"> Tentang Saya:</div>

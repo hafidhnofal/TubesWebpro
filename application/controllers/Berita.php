@@ -5,14 +5,16 @@ class Berita extends CI_Controller{
         $this->load->model('BeritaModel');
 		$this->load->model('LoginModel');
 		$this->load->model('UserModel');
+		$this->load->model('KomenModel');
 		$this->load->helper(array('form', 'url'));
 	} 
 	
 	function beritaLihat($id){
 		$data['user']=$this->LoginModel->get_data_user($this->session->userdata('nama'));
 		$data['berita'] = $this->BeritaModel->getBeritaById($id);
+		$data['komen'] = $this->KomenModel->get_comments($id);
 		$this->load->view('template/headerProfile',$data);
-        $this->load->view('pages/berita/beritaLihat_v',$data);
+        $this->load->view('pages/berita/beritaLihatHome_v',$data);
         $this->load->view('template/footer');
 	}
     function beritaHome(){
@@ -24,6 +26,7 @@ class Berita extends CI_Controller{
 		
 		$id=$this->UserModel->get_id_by_email($this->session->userdata('nama'));
 		$data['berita'] = $this->BeritaModel->getAllBerita($id);
+		
 		if ($this->input->post('keyword')) {
 			$data['berita'] = $this->BeritaModel->cariDataBerita();
 		}

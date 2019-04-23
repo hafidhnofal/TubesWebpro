@@ -49,8 +49,6 @@
             return $mhs->row_array();
         }
     
-        
-    
         public function cariDataBerita(){
             $keyword = $this->input->post('keyword', true);
             $this->db->query('SELECT * FROM `berita` JOIN user USING(id_user)');

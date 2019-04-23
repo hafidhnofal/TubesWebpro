@@ -25,7 +25,7 @@
                 <div class="nama1">
                     <b><?php echo $user['nama'];?></b>
                     Bergabung sejak : 01 Apr 2019
-                    Bengkulu, Indonesia
+                    <?php echo $user['provinsi'];?>, <?php echo $user['negara'];?>
                 </div>
 
                 <div class="aboutme">
